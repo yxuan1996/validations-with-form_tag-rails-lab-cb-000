@@ -2,9 +2,9 @@
 <%= form_tag authors_path, method: "post" do %>
   <% if @author.errors.any? %>
     <div id="error_explanation">
-      <h2>There were some errors: </h2>
+      <h3>There were some errors:</h3>
       <ul>
-        <% @author.errors.full_messages.each.do |message| %>
+        <% @author.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -34,7 +34,7 @@
   <% else %>
     <div class="field_with_errors">
   <% end %>
-    <%= label_tag "phone_number", "Phone_number" %>
+    <%= label_tag "phone_number", "Phone Number" %>
     <%= text_field_tag "phone_number", @author.phone_number %>
   </div>
 
